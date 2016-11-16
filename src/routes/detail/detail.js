@@ -23,7 +23,7 @@ function DetailController($scope, $routeParams, heroService, $location) {
   $scope.hero = heroService.get($scope.heroId);
 
   $scope.gotoList = function() {
-    $location.path('/list');
+    $location.path('/');
   }
 
 }
