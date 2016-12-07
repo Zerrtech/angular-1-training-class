@@ -11,6 +11,7 @@ function squadService() {
         heroes: [],
         getAll: getAll,
         clearAll: clearAll,
+        contains: contains,
         addHero: addHero,
         removeHero: removeHero,
         getMaxHeroes: getMaxHeroes,
@@ -63,6 +64,16 @@ function squadService() {
         if (heroNotInSquad && !service.isFull()) {
             service.heroes.push(hero);
         }
+    }
+
+    /**
+     * Return true if a hero exists in the squad
+     * 
+     * @param {Hero} hero
+     * @returns {Boolean} True if hero is in squad
+     */
+    function contains(hero) {
+        return (_getHeroIndex(hero) !== -1);
     }
 
     /**
